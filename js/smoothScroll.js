@@ -11,5 +11,8 @@ newArray.forEach(link => {
 			behavior: 'smooth',
 			block: 'start'
 		});
+
+	menuElem.classList.remove('menu-active');
+	burger.classList.remove('humburger-menu-active');
 	});
 });
