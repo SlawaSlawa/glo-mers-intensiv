@@ -10,6 +10,6 @@ newArray.forEach(link => {
 		document.getElementById(ID).scrollIntoView({
 			behavior: 'smooth',
 			block: 'start'
-		});		
+		});
 	});
 });
