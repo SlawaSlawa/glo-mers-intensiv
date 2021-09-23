@@ -6,24 +6,25 @@ for (let btn of tabsHandlerElems) {
 	btn.addEventListener('click', () => {
 		tabsHandlerElems.forEach((item, index) => {
 			item.classList.remove('design-list__item_active');
-			tabsTitles[index].classList.add('hidden');
-			// if () {
-			// 	tabsTitles[index].classList.add('hidden');				
-			// }else {
-			// 	tabsTitles[index].classList.remove('hidden');
-			// }
-
 		});
 		btn.classList.add('design-list__item_active');
 
 		tabsContentElems.forEach((content, index) => {
 			if (content.dataset.tabsField === btn.dataset.tabsHandler) {
 				content.classList.remove('hidden');
-				tabsTitles[index].classList.remove('hidden');
 			}else {
 				content.classList.add('hidden');
 			}
 		});
+
+		tabsTitles.forEach(title => {
+			if (title.classList.contains('hidden')) {
+				title.classList.remove('hidden');
+			}else {
+				title.classList.add('hidden');
+			}
+		});
+
 	});
 }
 
